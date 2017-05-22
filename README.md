@@ -32,6 +32,8 @@ and be sure to credit me if you are using any of it, including independent class
 
 - [x] Composer set up
 - [X] Composer installation
+- [X] Public Folder
+- [X] PHP Documentor integration
 - [ ] Request Class
     - [X] Request Input
     - [X] Request Method
@@ -42,7 +44,6 @@ and be sure to credit me if you are using any of it, including independent class
 - [ ] Blade or similar (for Views)
 - [ ] Framework integration
 - [ ] Database Global
-- [ ] PHP Documentor integration
-
+- [ ] Bootstrap and Jquery addition (With the configuration for each version)
 
 
