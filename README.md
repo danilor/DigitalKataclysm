@@ -74,7 +74,8 @@ and be sure to credit me if you are using any of it, including independent class
     - [X] Request Method
     - [X] Request Server
     - [ ] Request Integration
-- [ ] Config class
+- [X] Config class
+- [X] File .INI compatibility
 - [ ] User session class
 - [ ] Framework integration
 - [ ] Database Global
