@@ -45,5 +45,3 @@ and be sure to credit me if you are using any of it, including independent class
 - [ ] Framework integration
 - [ ] Database Global
 - [ ] Bootstrap and Jquery addition (With the configuration for each version)
-
-
