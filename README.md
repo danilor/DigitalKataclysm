@@ -12,7 +12,18 @@ with older versions of PHP (Sorry, we have to aim for the future).
 
 ## Environment
 
-Right now I am working in the [PHP STORM](https://www.jetbrains.com/phpstorm/)  IDE. If in the future we find a better IDE to work PHP then we will switch,
+I recommend using Linux Based servers to work with PHP since Microsoft Windows Servers are kind 
+of hard to set up with PHP, specially if we want to use custom libraries and complex functionality.
+ There is a really good manual at [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04)
+ explaining how to install and set up everything you would require for a 
+ full PHP server, from the installation of Apache2 to the installation of all PHP libraries.
+ 
+ If there is no other option but to work in a Microsoft Windows environment, I recommend using 
+ the [Laragon](https://laragon.org/) package that will, automatically, install everything you would need
+ to work with PHP in Microsoft Windows based systems (works with Server and Desktop versions).
+
+Talking about the tools, right now I am working in the [PHP STORM](https://www.jetbrains.com/phpstorm/)  IDE. 
+If in the future we find a better IDE to work PHP then we will switch,
 but for now, I am very comfortable using it. If you want to give it a try go ahead. 
 
 ## Similarities with Laravel
