@@ -8,7 +8,12 @@ but in the future it can take that path.
 ## Requirements
 
 This framework was made using PHP 7.1. That means that we are not providing backward compatibility 
-with older versions of PHP (Sorry, we have to ain for the future).
+with older versions of PHP (Sorry, we have to aim for the future).
+
+## Environment
+
+Right now I am working in the [PHP STORM](https://www.jetbrains.com/phpstorm/)  IDE. If in the future we find a better IDE to work PHP then we will switch,
+but for now, I am very comfortable using it. If you want to give it a try go ahead. 
 
 ## Want to help me?
 
