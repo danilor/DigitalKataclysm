@@ -1,0 +1,21 @@
+{
+  "name": "DaniloRamirezCR/DigitalKataclysm",
+  "description": "Lightweight framework inspired in Laravel",
+  "license": "GNU",
+  "type":"project",
+  "require": {
+    "illuminate/database": "^5.1"
+  },
+  "autoload": {
+    "classmap": [
+      "app/Classes"
+    ],
+    "psr-4": {
+      "Kataclsym\\": "app"
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "secure-http":false
+  }
+}

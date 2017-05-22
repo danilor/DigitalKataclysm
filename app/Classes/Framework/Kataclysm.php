@@ -1,0 +1,18 @@
+<?php
+namespace Kataclysm;
+
+
+/**
+ * Class Kataclysm
+ * @package Kataclysm
+ */
+class Kataclysm
+{
+
+    /**
+     * Kataclysm constructor.
+     */
+    public function __construct()
+    {
+    }
+}
