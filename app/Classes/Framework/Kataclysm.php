@@ -61,6 +61,52 @@ class Kataclysm
         return $this->dir;
     }
 
+    /**
+     * Returns the APP basepath
+     * @return string
+     */
+    public function getAppPath() : string
+    {
+        return $this->dir . DIRECTORY_SEPARATOR . 'app';
+    }
+
+    /**
+     * Returns the Views basepath
+     * @return string
+     */
+    public function getViewsPath() : string
+    {
+        return $this->dir . DIRECTORY_SEPARATOR . 'Assets' . DIRECTORY_SEPARATOR . 'Views';
+    }
+
+    /**
+     * Returns the Storage basepath
+     * @return string
+     */
+    public function getStoragePath() : string
+    {
+        return $this->dir . DIRECTORY_SEPARATOR . 'Storage';
+    }
+
+    /**
+     * Returns the Config basepath
+     * @return string
+     */
+    public function getConfigPath() : string
+    {
+        return $this->getAppPath() . DIRECTORY_SEPARATOR . 'Config';
+    }
+
+    /**
+     * Returns the Web basepath
+     * @return string
+     */
+    public function getWebPath() : string
+    {
+        return $this->dir . DIRECTORY_SEPARATOR . 'web';
+    }
+
+
 
 
 

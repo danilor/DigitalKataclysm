@@ -56,21 +56,23 @@ and be sure to credit me if you are using any of it, including independent class
 - [X] Composer installation
 - [X] Public Folder
 - [X] PHP Documentor integration
+- [X] View Class
+    - [X] Blade or similar (for Views)
 - [ ] Request Class
     - [X] Request Input
     - [X] Request Method
     - [X] Request Server
     - [ ] Request Integration
-- [ ] View Class
 - [ ] Config class
 - [ ] User session class
-- [ ] Blade or similar (for Views)
 - [ ] Framework integration
 - [ ] Database Global
 - [ ] Integrated validations
 - [ ] Bootstrap and Jquery addition (With the configuration for each version)
+- [ ] Create logo
 
 ## Technologies
 
 ![Composer](https://www.dev-metal.com/wp-content/uploads/2013/12/composer-logo-1-100x100.jpg)
 ![PHP](https://www.dev-metal.com/wp-content/uploads/2014/02/php-logo-1-100x100.jpg)
+![JQUERY](https://www.audero.it/blog/wp-content/uploads/2013/09/jQuery-logo.png)
