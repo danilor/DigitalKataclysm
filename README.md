@@ -15,6 +15,23 @@ with older versions of PHP (Sorry, we have to aim for the future).
 Right now I am working in the [PHP STORM](https://www.jetbrains.com/phpstorm/)  IDE. If in the future we find a better IDE to work PHP then we will switch,
 but for now, I am very comfortable using it. If you want to give it a try go ahead. 
 
+## Similarities with Laravel
+
+### Database
+
+We are using the same database engine as described in [here](https://github.com/illuminate/database). This is 
+powerful database class and we don't think is necessary to redo another class if this works like a charm.
+
+### Blade system
+
+One of the most powerful tools in Laravel is its views system. Since we are trying to
+emulate that part, we are using the same [Blade System](https://packagist.org/packages/philo/laravel-blade)
+to take advantage of all its features.
+
+### Dumper
+
+Easier way to debug the code. Belong to the [Illiminate Support](https://packagist.org/packages/laracasts/utilities).
+
 ## Want to help me?
 
 If you are willing to spend some time checking the code and adding improvements, 
@@ -46,7 +63,14 @@ and be sure to credit me if you are using any of it, including independent class
     - [ ] Request Integration
 - [ ] View Class
 - [ ] Config class
+- [ ] User session class
 - [ ] Blade or similar (for Views)
 - [ ] Framework integration
 - [ ] Database Global
+- [ ] Integrated validations
 - [ ] Bootstrap and Jquery addition (With the configuration for each version)
+
+## Technologies
+
+![Composer](https://www.dev-metal.com/wp-content/uploads/2013/12/composer-logo-1-100x100.jpg)
+![PHP](https://www.dev-metal.com/wp-content/uploads/2014/02/php-logo-1-100x100.jpg)

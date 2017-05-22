@@ -67,6 +67,14 @@ class Request
      */
     public function __construct( )
     {
+        $this->capture();
+    }
+
+    /**
+     * This function will capture all the request into the object.
+     * We are not putting all this code into the constructor just to keep the class ordered
+     */
+    public function capture(){
         /**
          * Reading all the REQUEST variables
          */
@@ -91,7 +99,7 @@ class Request
         /**
          * Setting up if this was a secure connection
          */
-        if( $_SERVER["HTTPS"] != "" ){
+        if( @$_SERVER["HTTPS"] != "" ){
             $this->secure_connection            =           true;
         }
 
@@ -99,7 +107,6 @@ class Request
          * Get the request URL
          */
         $this->uri                              =           $_SERVER["REQUEST_URI"];
-
     }
 
     /**

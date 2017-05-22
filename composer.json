@@ -4,7 +4,8 @@
   "license": "GNU",
   "type":"project",
   "require": {
-    "illuminate/database": "^5.1"
+    "illuminate/database": "^5.1",
+    "philo/laravel-blade": "3.*"
   },
   "autoload": {
     "classmap": [
