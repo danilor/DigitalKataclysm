@@ -76,3 +76,5 @@ and be sure to credit me if you are using any of it, including independent class
 ![Composer](https://www.dev-metal.com/wp-content/uploads/2013/12/composer-logo-1-100x100.jpg)
 ![PHP](https://www.dev-metal.com/wp-content/uploads/2014/02/php-logo-1-100x100.jpg)
 ![JQUERY](https://www.audero.it/blog/wp-content/uploads/2013/09/jQuery-logo.png)
+![BOOTSTRAP](http://www.nebula-marketing.co.uk/assets/images/bootstrap-logo.jpg)
+![FONT-AWESOME](https://iconscout.com/images/profile/small/font-awesome-3a2d482d42d7b1ee-58398de03e379-100x100.jpg)
