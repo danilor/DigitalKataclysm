@@ -42,6 +42,9 @@
                         </p>
 
                         <p>This is a temporal landing page. You can wait for the most awesome landing page you have ever see in the future, so this one is going to be replaced.</p>
+                        <p>
+                            In the meantime, why don't you check my <a href="/mygithub">Github account</a>? Maybe you can find something of your interest!
+                        </p>
 
                     </div>
                 </div>

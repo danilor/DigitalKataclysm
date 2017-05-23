@@ -46,3 +46,22 @@ function request() : \Kataclysm\Data\Request
 {
     return \Kataclysm\Kataclysm::getInstanceRequest();
 }
+
+
+/**
+ * This method is to help creating routes without having to create the routes objects
+ * @param $method
+ * @param $uri
+ * @param $class
+ * @param $class_method
+ */
+function create_route($method , $uri , $class , $class_method ){
+    $Route = new Kataclysm\Routing\Route();
+    // Set up the parameters
+    $Route -> setUrl( $uri );
+    $Route -> setMethod( $method  );
+    $Route -> setClassName( $class );
+    $Route -> setMethodName( $class_method );
+    // Add the route to the routes list
+    Kataclysm\Routing\Routes::addRoute( $Route );
+}

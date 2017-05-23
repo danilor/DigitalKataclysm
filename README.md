@@ -74,6 +74,8 @@ not suitable for your needs, so why just don't take this one and make it exactly
 All the code made in this repository was made by Danilo Ramírez Mattey. Please use it carefully 
 and be sure to credit me if you are using any of it, including independent classes.
 
+Copyright 2017 | San José, Costa Rica
+
 ## Working status
 
 - [x] Composer set up
@@ -99,6 +101,8 @@ and be sure to credit me if you are using any of it, including independent class
 - [ ] Create logo
 - [ ] Closures
 - [ ] Error and not found system (pages 500 and 404)
+- [ ] Add view for JSON type
+- [ ] Add view for XML type
 
 ## Technologies
 

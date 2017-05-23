@@ -16,7 +16,7 @@ use Kataclysm\Data\Request;
  * MAIN ROUTES
  */
 
-// Create the Route
+// Create the Route using the usual method
 $Route = new Route();
 // Set up the parameters
 $Route -> setUrl( "/" );
@@ -25,3 +25,6 @@ $Route -> setClassName( "Welcome" );
 $Route -> setMethodName( "start" );
 // Add the route to the routes list
 Routes::addRoute( $Route );
+
+// Now lets create a rute using the simplified method
+create_route( Request::METHOD_GET           ,           "/mygithub"         ,       "Welcome"           ,       "showMyGithub" );

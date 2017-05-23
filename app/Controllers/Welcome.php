@@ -17,6 +17,10 @@ class Welcome extends Controller
      * This is the method that will show the welcome page
      */
     public function start(){
-        return $this->view( "start" );
+        return $this->view( "start.start" );
+    }
+
+    public function showMyGithub(){
+        return $this->view( "start.mygithub" );
     }
 }
