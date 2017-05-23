@@ -1,0 +1,14 @@
+<?php
+
+
+namespace Kataclysm;
+
+/**
+ * Class Controller
+ * This will be the main controller class. It is abstract
+ * @package Kataclysm
+ */
+abstract class Controller
+{
+
+}

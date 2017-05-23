@@ -1,7 +1,21 @@
 <?php
 namespace Kataclysm;
 
+/**
+ * Kataclsym Class
+ * This is the application class. Everything should pass thought
+ * here.
+ */
 
+/*****************************************************************************************************
+    |----------------------------------------------------------------------------------------------|
+    | Behold this code, beneath those characters you will find the hope and dreams of those        |
+    | who thought on a better future. Let this code impregnate your  soul, eat of your flesh       |
+    | and become one with you; because you are the chosen one, with fire in your eyes and bright   |
+    | in your heart, you are the one that is going to make a better future, to light the path      |
+    | of those behind you and to become more than a man.                                           |
+    |----------------------------------------------------------------------------------------------|
+ *****************************************************************************************************/
 use Kataclysm\Data\Request;
 use Kataclysm\Responses\Response;
 use Kataclysm\Routing\Routes;
@@ -213,7 +227,6 @@ class Kataclysm
 
     }
 
-
     /**
      * This method will return the error page
      * @param \Exception $err
@@ -223,7 +236,6 @@ class Kataclysm
         // TODO make a way to handle the system errors
         return "Error : " . $err->getMessage();
     }
-
 
     /**
      * This will return the current APP instance, if it does not exist, then we are creating it.
@@ -247,6 +259,10 @@ class Kataclysm
         return self::getInstance()->getRequest();
     }
 
+    /**
+     * This method will return a fully funcional blade instance
+     * @return \Philo\Blade\Blade
+     */
     public static function getInstanceBlade() : \Philo\Blade\Blade
     {
         return self::getInstance()->getBlade();

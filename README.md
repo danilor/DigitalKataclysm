@@ -90,28 +90,30 @@ Copyright 2017 | San José, Costa Rica
 ## Working status
 
 - [x] Composer set up
-- [X] Composer installation
+    - [X] Composer installation
 - [X] Public Folder
 - [X] PHP Documentor integration
 - [X] View Class
     - [X] Blade or similar (for Views)
-- [ ] Request Class
+- [X] Request Class
     - [X] Request Input
     - [X] Request Method
     - [X] Request Server
-    - [ ] Request Integration
+    - [X] Request Integration
 - [X] Config class
 - [X] File .INI compatibility
 - [X] Bootstrap and Jquery addition (With the configuration for each version)
-- [X] URL Rewrite
+- [ ] URL Management
+    - [X] URL Rewrite
+    - [ ] Routing with wildcards
+    - [ ] Error and not found system (pages 500 and 404)
 - [ ] User session class
-- [ ] Routing with wildcards
 - [ ] Framework integration
 - [ ] Database Global
 - [ ] Integrated validations
 - [ ] Create logo
 - [ ] Closures
-- [ ] Error and not found system (pages 500 and 404)
+
 - [ ] Add view for JSON type
 - [ ] Add view for XML type
 

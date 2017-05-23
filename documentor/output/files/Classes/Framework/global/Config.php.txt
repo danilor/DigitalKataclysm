@@ -12,8 +12,14 @@ use Kataclysm\System\SystemException;
 class Config
 {
 
+    /**
+     * Constants for the Config File
+     */
     const SEPARATOR = '.';
     const EXTENSION = 'php';
+    const INI_FILE = 'app.ini';
+
+    private static $ini = null;
 
     /**
      * This method will return the
@@ -68,6 +74,26 @@ class Config
             }
     }
 
+
+    /**
+     * It will return the value of one configuration in the INI file.
+     * These configurations are perfect when they are environment related.
+     * @param string $key
+     * @param string $default
+     * @return string
+     */
+    public static function env(string $key , $default = '' ) : string
+    {
+        if( self::$ini == null ){
+            self::$ini      =       parse_ini_file( self::getEnvFilePath() );
+        }
+
+        if( !isset( self::$ini[ $key ] ) ){
+            return $default;
+        }
+        return self::$ini[ $key ];
+    }
+
     /**
      * Recursive METHOD
      * @param $config
@@ -110,6 +136,11 @@ class Config
         }
     }
 
+    /**
+     * Returns the path of the config file name
+     * @param string $configName
+     * @return string
+     */
     private static function getConfigFilePath( string $configName ) : string
     {
         /**
@@ -120,4 +151,13 @@ class Config
         $config_folder = Kataclysm::getInstance()->getConfigPath();
         return $config_folder . DIRECTORY_SEPARATOR . $configName . self::SEPARATOR . self::EXTENSION; // We are using position 0 because that is suppose to be the filename
     }
+
+    /**
+     * It returns the path of the ini file defined with the constants in this Config
+     * @return string
+     */
+    private static function getEnvFilePath() : string{
+        return Kataclysm::getInstance()->getAppBasePath() . DIRECTORY_SEPARATOR . self::INI_FILE;
+    }
+
 }

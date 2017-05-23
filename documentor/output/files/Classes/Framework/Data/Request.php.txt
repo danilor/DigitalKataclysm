@@ -16,6 +16,14 @@ namespace Kataclysm\Data;
 class Request
 {
 
+    // Different type of methods
+    const METHOD_POST    = 'POST';
+    const METHOD_GET     = 'GET';
+    const METHOD_PUT     = 'PUT';
+    const METHOD_HEAD    = 'HEAD';
+    const METHOD_DELETE  = 'DELETE';
+    const METHOD_OPTIONS = 'OPTIONS';
+
     /**
      * This will hold all the input of the request
      * @var array
@@ -59,6 +67,19 @@ class Request
      * @var string
      */
     private $uri                =               '';
+
+    /**
+     * This will harvest and hold the query string of the request
+     * @var string
+     */
+    private $query_string       =               '';
+
+
+    /**
+     * This variable will contain the list of the segments
+     * @var array
+     */
+    private $segments           =               [];
 
 
     /**
@@ -107,6 +128,16 @@ class Request
          * Get the request URL
          */
         $this->uri                              =           $_SERVER["REQUEST_URI"];
+
+        /**
+         * Get the query string
+         */
+        $this->query_string                     =           $_SERVER['QUERY_STRING'];
+
+        /**
+         * Get the segments
+         */
+        $this->segments                         =           array_filter(explode( '/'    ,   $this->getUri() ));
     }
 
     /**
@@ -154,7 +185,7 @@ class Request
      * @return bool
      */
     public function isPost() : bool{
-        return ( strtoupper($this->getMethod())  == "POST" );
+        return ( strtoupper($this->getMethod())  == self::METHOD_POST );
     }
 
     /**
@@ -162,7 +193,7 @@ class Request
      * @return bool
      */
     public function isGET() : bool{
-        return ( strtoupper($this->getMethod())  == "GET" );
+        return ( strtoupper($this->getMethod())  == self::METHOD_GET );
     }
 
     /**
@@ -170,7 +201,7 @@ class Request
      * @return bool
      */
     public function isPUT() : bool{
-        return ( strtoupper($this->getMethod())  == "PUT" );
+        return ( strtoupper($this->getMethod())  == self::METHOD_PUT );
     }
 
     /**
@@ -178,7 +209,7 @@ class Request
      * @return bool
      */
     public function isHEAD() : bool{
-        return ( strtoupper($this->getMethod())  == "HEAD" );
+        return ( strtoupper($this->getMethod())  == self::METHOD_HEAD );
     }
 
     /**
@@ -186,7 +217,7 @@ class Request
      * @return bool
      */
     public function isDelete() : bool{
-        return ( strtoupper($this->getMethod())  == "DELETE" );
+        return ( strtoupper($this->getMethod())  == self::METHOD_DELETE );
     }
 
     /**
@@ -194,7 +225,7 @@ class Request
      * @return bool
      */
     public function isOptions() : bool{
-        return ( strtoupper($this->getMethod())  == "OPTIONS" );
+        return ( strtoupper($this->getMethod())  == self::METHOD_OPTIONS );
     }
 
     /**
@@ -237,7 +268,17 @@ class Request
         return $this->uri;
     }
 
-
-
-
+    /**
+     * This method will return the string of the segment in the URI.
+     * If it does not exist it will return the default value indicating in the method
+     * @param int $i
+     * @param string $default
+     * @return string
+     */
+    public function getSegment( int $i , string $default = '' ) : string{
+        if( isset( $this->segments[ $i ] ) ){
+            return $this->segments[ $i ];
+        }
+        return $default;
+    }
 }
