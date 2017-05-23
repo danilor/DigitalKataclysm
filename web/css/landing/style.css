@@ -125,8 +125,8 @@ fieldset {
 
 .section-title {
     position: relative;
-    margin-bottom: 100px;
-    padding-top: 80px;
+    margin-bottom: 40px;
+    padding-top: 30px;
 }
 
 .section-title:before {
