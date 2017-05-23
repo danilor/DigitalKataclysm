@@ -120,7 +120,7 @@ class Request
         /**
          * Setting up if this was a secure connection
          */
-        if( @$_SERVER["HTTPS"] != "" ){
+        if( isset( $_SERVER["HTTPS"] ) && @$_SERVER["HTTPS"] != "" ){
             $this->secure_connection            =           true;
         }
 
@@ -261,11 +261,18 @@ class Request
     }
 
     /**
+     * @param bool $autocomplete If true, and it the URI does not have the final /, it will add it
      * @return string
      */
-    public function getUri() : string
+    public function getUri( $autocomplete = true ) : string
     {
-        return $this->uri;
+        $url = $this->uri;
+        if( $autocomplete ){
+            if( substr($url, -1) != '/' ){
+                $url .= '/';
+            }
+        }
+        return $url;
     }
 
     /**

@@ -105,15 +105,14 @@ Copyright 2017 | San José, Costa Rica
 - [X] Bootstrap and Jquery addition (With the configuration for each version)
 - [ ] URL Management
     - [X] URL Rewrite
-    - [ ] Routing with wildcards
-    - [ ] Error and not found system (pages 500 and 404)
+    - [X] Routing with wildcards
+    - [X] Error and not found system (pages 500 and 404) (Still not working as I would like it to work)
 - [ ] User session class
 - [ ] Framework integration
 - [ ] Database Global
 - [ ] Integrated validations
 - [ ] Create logo
 - [ ] Closures
-
 - [ ] Add view for JSON type
 - [ ] Add view for XML type
 

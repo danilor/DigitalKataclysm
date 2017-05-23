@@ -19,7 +19,9 @@ namespace Kataclysm;
 use Kataclysm\Data\Request;
 use Kataclysm\Responses\Response;
 use Kataclysm\Routing\Routes;
+use Kataclysm\System\SystemError;
 use Kataclysm\System\SystemException;
+use Kataclysm\System\SystemNotFound;
 
 /**
  * Class Kataclysm
@@ -72,8 +74,8 @@ class Kataclysm
          * Lets create the Request object
          */
         $this->request = new Request();
-        $views = $this->dir . '/./Assets/Views';
-        $cache = $this->dir . '/./Storage/ViewsCache';
+        $views = $this->dir . '/./assets/Views';
+        $cache = $this->dir . '/./storage/ViewsCache';
 
         $this->blade = new \Philo\Blade\Blade( $views , $cache );
     }
@@ -102,16 +104,16 @@ class Kataclysm
      */
     public function getViewsPath() : string
     {
-        return $this->dir . DIRECTORY_SEPARATOR . 'Assets' . DIRECTORY_SEPARATOR . 'Views';
+        return $this->dir . DIRECTORY_SEPARATOR . 'assets' . DIRECTORY_SEPARATOR . 'Views';
     }
 
     /**
-     * Returns the Storage basepath
+     * Returns the storage basepath
      * @return string
      */
     public function getStoragePath() : string
     {
-        return $this->dir . DIRECTORY_SEPARATOR . 'Storage';
+        return $this->dir . DIRECTORY_SEPARATOR . 'storage';
     }
 
     /**
@@ -158,8 +160,9 @@ class Kataclysm
      */
     public function execute(){
         return $this->renderSimpleRoute();
-    }
 
+
+    }
 
     /**
      * This will make a render of a simple route (in this case, a simple route is that one that only works with a class and a method,
@@ -199,12 +202,26 @@ class Kataclysm
             }else{
                 return $this->sendErrorPage( new \Exception("Class does not exist or it is not in the class map") );
             }
-
-        }catch (\Exception $err){
+        }catch (SystemNotFound $err){
             /**
-             * This is the expected error in the case the route does not exist, the class give an error or something similar.
+             * This is the only difference. We should be able to send a different error page when its a no found exception
              */
+            return $this->send404Page( $err );
+            //return "Not found!";
+        }catch (SystemException $err){
             return $this->sendErrorPage( $err );
+            //return "System exception";
+        }catch(SystemError $err){
+            $err = new \Exception($err->getMessage() , $err->getCode() , $err );
+            return $this->sendErrorPage( $err );
+            //return "System Error";
+        }catch (\Exception $err){
+            return $this->sendErrorPage( $err );
+            //return "Normal Exception";
+        }catch(\Error $err){
+            $err = new \Exception($err->getMessage() , $err->getCode() , $err );
+            return $this->sendErrorPage( $err );
+            //return "Normal Error";
         }
     }
 
@@ -215,7 +232,7 @@ class Kataclysm
      * @return string
      * @throws SystemException If the process returns an error, we return it
      */
-    private function processResponse( Response $response ) : string
+    public function processResponse( Response $response ) : string
     {
         try{
             return Response::processResponse( $response );
@@ -232,9 +249,24 @@ class Kataclysm
      * @param \Exception $err
      * @return string
      */
-    private function sendErrorPage(\Exception $err ) : string{
-        // TODO make a way to handle the system errors
-        return "Error : " . $err->getMessage();
+    public function sendErrorPage(\Exception $err ) : string{
+        $response = new \Kataclysm\Responses\ResponseView();
+        $response -> setData( ["err"=>$err] );
+        $response->setView( "errors.general" );
+        return $response->execute();
+    }
+
+    /**
+     * This method will send a 404 page
+     * @param SystemNotFound $err
+     * @return string
+     */
+    private function send404Page( SystemNotFound $err ) : string
+    {
+        $response = new \Kataclysm\Responses\ResponseView();
+        $response -> setData( ["err"=>$err] );
+        $response->setView( "errors.404" );
+        return $response->execute();
     }
 
     /**

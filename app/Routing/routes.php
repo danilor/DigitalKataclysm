@@ -16,6 +16,15 @@ use Kataclysm\Data\Request;
  * MAIN ROUTES
  */
 
+/**
+    |------------------------------------------------------|
+    | Wild Cards                                           |
+    |------------------------------------------------------|
+    | {area_name:}              =>      Required           |
+    | {area_name?}              =>      Optional           |
+    |------------------------------------------------------|
+*/
+
 // Create the Route using the usual method
 $Route = new Route();
 // Set up the parameters
@@ -28,3 +37,7 @@ Routes::addRoute( $Route );
 
 // Now lets create a rute using the simplified method
 create_route( Request::METHOD_GET           ,           "/mygithub"         ,       "Welcome"           ,       "showMyGithub" );
+
+create_route( Request::METHOD_GET           ,           "/yvideo/{id:}/"     ,       "Welcome"           ,       "showYoutubeVideo" );
+
+

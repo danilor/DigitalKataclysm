@@ -3,6 +3,7 @@
 
 namespace Kataclysm\Routing;
 use Kataclysm\System\SystemException;
+use Kataclysm\System\SystemNotFound;
 
 
 /**
@@ -59,19 +60,27 @@ class Routes
      * @param string $key
      * @param string $method
      * @return Route
-     * @throws SystemException
+     * @throws SystemNotFound
      */
     public static function findRoute(string $key , string $method ) : Route{
         $routes = self::getRoutes();
-        $key = $method . self::IDENTIFIER_SEPARATOR . $key;
-
-        if( isset( $routes[ $key ] ) ){
-            return $routes[ $key ];
-        }else{
-            throw new SystemException( "Route - " . $key . " - could not be found." );
+        //dd( $routes , $key );
+        /**
+         * WE have to search every route individually
+         * TODO: Make a better way to search the rute
+         */
+        foreach( $routes AS $route ){
+            $matches = null;
+            $start_ending_character = '/';
+            $regex = $start_ending_character . '^' . $route->getRegexUrl() . '$' . $start_ending_character;
+            if( preg_match_all( $regex , $key , $matches )  && $route->getMethod() === $method  ){
+                //dd( $regex , $key , $method );
+                return $route;
+            }
         }
-
-
+        /**
+         * If it does not find anything, it will return the error.
+         */
+        throw new SystemNotFound( "Route - " . $key . " - could not be found." );
     }
-
 }

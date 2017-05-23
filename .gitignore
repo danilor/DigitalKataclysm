@@ -7,8 +7,8 @@ composer.phar
 
 \.idea/
 
-Storage/ViewsCache/
-Storage/Errors/
+storage/ViewsCache/
+storage/Errors/
 
 
 app\.ini

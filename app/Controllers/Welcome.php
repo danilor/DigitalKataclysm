@@ -3,7 +3,6 @@
 namespace Controllers;
 
 use \Kataclysm\Data\Controller;
-use Kataclysm\Responses\ResponseView;
 
 /**
  * Class Welcome
@@ -22,5 +21,12 @@ class Welcome extends Controller
 
     public function showMyGithub(){
         return $this->view( "start.mygithub" );
+    }
+
+    /**
+     * This method will only show a youtube video to show how the dynamic url works
+     */
+    public function showYoutubeVideo(){
+        return $this->view( "start.yvideo" );
     }
 }
