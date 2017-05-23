@@ -1,9 +1,18 @@
 # DigitalKataclysm
-Larave inspired Framework for small projects. 
+
+Laravel inspired Framework for small projects. 
 
 Working with PHP it tries to emulate how frameworks such as Laravel works, but in their minimal 
-state and the maximun code reach. Its not intended for final users or huge projects ( not yet), 
+state and the maximun code reach. Its not intended for final users or huge projects (not yet), 
 but in the future it can take that path.
+
+You will see that there are a lot of similarities with Laravel, and a lot of methods with the
+same name; but this does not mean that it works exactly the same. This familiar code will help
+usual Laravel developers to get use to this framework, and at the same time, get to know its differences.
+
+The real objective of this project is not to become popular, or replace other MVC such as Laravel, but to
+offer another lightweight option for those sites that does not require so much code power, but still
+want to keep its common structure.
 
 ## Requirements
 
@@ -43,6 +52,10 @@ to take advantage of all its features.
 
 Easier way to debug the code. Belong to the [Illiminate Support](https://packagist.org/packages/laracasts/utilities).
 
+### HTAccess
+
+We are using the exact same .htaccess file that Laravel provides.
+
 ## Want to help me?
 
 If you are willing to spend some time checking the code and adding improvements, 
@@ -76,12 +89,15 @@ and be sure to credit me if you are using any of it, including independent class
     - [ ] Request Integration
 - [X] Config class
 - [X] File .INI compatibility
+- [X] Bootstrap and Jquery addition (With the configuration for each version)
 - [ ] User session class
+- [ ] URL Rewrite
+- [ ] Routing with wildcards
 - [ ] Framework integration
 - [ ] Database Global
 - [ ] Integrated validations
-- [ ] Bootstrap and Jquery addition (With the configuration for each version)
 - [ ] Create logo
+- [ ] Closures
 
 ## Technologies
 

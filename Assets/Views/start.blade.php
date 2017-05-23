@@ -22,22 +22,23 @@
                 <h3>{{ "DIGITAL" }} <span>{{ "KATACLYSM" }}</span></h3>
             </div>
 
-
             <div class="row">
-
                 <div class="col-md-6 col-md-offset-3">
                     <div class="about-us">
                         <p>DIGITAL KATACLYSM is a Framework inspired in applications such as Laravel and other MVC frameworks. It tries to stay as loyal to the Laravel structure and at the same time have its own magic in it. It is even using some of the most popular Laravel packages, but trying to use only the necessary ones.</p>
-
                         <p>
                             Current Environment:
                         </p>
                         <p>
                             <center>
                                 <strong>
-                                    {{ \Config::env("ENV") }}
+                                    {{ env("ENV") }}
                                 </strong>
                             </center>
+                        </p>
+
+                        <p>
+                            This is a working process, so its normal find some issues and errors. If you find something that you consideer that slipped from my hands, please let me know.
                         </p>
 
                         <p>This is a temporal landing page. You can wait for the most awesome landing page you have ever see in the future, so this one is going to be replaced.</p>
@@ -49,9 +50,7 @@
         </div>
     </section>
     <!-- About Us End -->
-
     </body>
-
     @include("templates.blocks.footerJs")
 
 </html>

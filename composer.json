@@ -8,11 +8,15 @@
     "philo/laravel-blade": "3.*"
   },
   "autoload": {
+    "files":[
+      "app/Helpers/helpers.php",
+      "app/Routing/routes.php"
+    ],
     "classmap": [
       "app/Classes"
     ],
     "psr-4": {
-      "Kataclsym\\": "app"
+      "Kataclysm\\": "app"
     }
   },
   "config": {
