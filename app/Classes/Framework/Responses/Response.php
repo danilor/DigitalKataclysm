@@ -14,7 +14,6 @@ use Kataclysm\System\SystemException;
 abstract class Response
 {
 
-
     /**
      * All responses should return a full string of what
      * they want to print into the page.

@@ -1,9 +1,7 @@
 <?php
-
-
 namespace Kataclysm\Data;
 
-
+use Kataclysm\Responses\ResponseView;
 /**
  * Class Controller
  * This is the class that all controllers should extend
@@ -16,5 +14,20 @@ abstract class Controller
      * @var
      */
     protected $origin;
+
+    /**
+     * This method will automatically return a response of the type View
+     * @param string $viewName
+     * @param array $data
+     * @return ResponseView
+     */
+    public function view(string $viewName , array $data = [] ) : ResponseView
+    {
+        $request = request(); // Lets bring the request
+        $response = new ResponseView();
+        $response -> setData( $data );
+        $response->setView( $viewName );
+        return $response;
+    }
 
 }
