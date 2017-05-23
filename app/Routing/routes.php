@@ -19,6 +19,9 @@ use Kataclysm\Data\Request;
 // Create the Route
 $Route = new Route();
 // Set up the parameters
+$Route -> setUrl( "/" );
 $Route -> setMethod( Request::METHOD_GET  );
+$Route -> setClassName( "Welcome" );
+$Route -> setMethodName( "start" );
 // Add the route to the routes list
 Routes::addRoute( $Route );

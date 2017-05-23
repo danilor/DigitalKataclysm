@@ -13,7 +13,8 @@
       "app/Routing/routes.php"
     ],
     "classmap": [
-      "app/Classes"
+      "app/Classes",
+      "app/Controllers"
     ],
     "psr-4": {
       "Kataclysm\\": "app"

@@ -90,14 +90,15 @@ and be sure to credit me if you are using any of it, including independent class
 - [X] Config class
 - [X] File .INI compatibility
 - [X] Bootstrap and Jquery addition (With the configuration for each version)
+- [X] URL Rewrite
 - [ ] User session class
-- [ ] URL Rewrite
 - [ ] Routing with wildcards
 - [ ] Framework integration
 - [ ] Database Global
 - [ ] Integrated validations
 - [ ] Create logo
 - [ ] Closures
+- [ ] Error and not found system (pages 500 and 404)
 
 ## Technologies
 

@@ -2,6 +2,7 @@
 
 
 namespace Kataclysm\Responses;
+use Kataclysm\System\SystemException;
 
 
 /**
@@ -20,5 +21,27 @@ abstract class Response
      * @return string
      */
     public abstract function execute() : string;
+
+
+    /**
+     * This method will process a full response and return the string of its result
+     * @param Response $response
+     * @return string
+     * @throws SystemException
+     */
+    public static function processResponse( Response $response) : string
+    {
+        /**
+         * We work with the response view now
+         */
+        if( $response instanceof ResponseView ){
+            return $response->execute();
+        }else{
+            /**
+             * If it is not in the response lists we accept, then we throw an error
+             */
+            throw new SystemException("Response invalid. It is not one of the valid responses accepted by the system.");
+        }
+    }
 
 }

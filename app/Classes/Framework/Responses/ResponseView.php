@@ -70,8 +70,8 @@ class ResponseView extends Response
      * This method will add a single element to the data
      * @param $d This does not have type because we wan add anything
      */
-    public function addData( $d ){
-        $this -> data[]         =       $d;
+    public function addData( $key, $value ){
+        $this -> data[ $key ]         =       $value;
     }
 
 
@@ -86,14 +86,16 @@ class ResponseView extends Response
          * Lets get the blade instance
          */
         $blade = \Kataclysm\Kataclysm::getInstance()->getBlade();
-        $view = $blade  ->  view();
-        $view ->make( $this->getView() );
+
+
+        $view = $blade  ->  view() -> make( $this->getView() );
         /**
          * if there is actual data
          */
         if( COUNT( $this->getData() ) > 0 ){
             $view->withData( $this->getData() );
         }
+
         return $view->render();
     }
 }

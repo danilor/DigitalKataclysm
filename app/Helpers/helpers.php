@@ -36,3 +36,13 @@ function config( string $key , string $default = '' ){
 function segment( int $i , string $default = '' ) : string{
     return \Kataclysm\Kataclysm::getInstance()->getRequest()->getSegment( $i , $default );
 }
+
+
+/**
+ * This method will return the request object
+ * @return \Kataclysm\Data\Request
+ */
+function request() : \Kataclysm\Data\Request
+{
+    return \Kataclysm\Kataclysm::getInstanceRequest();
+}

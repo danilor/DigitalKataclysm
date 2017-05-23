@@ -2,6 +2,7 @@
 
 
 namespace Kataclysm\Routing;
+use Kataclysm\System\SystemException;
 
 
 /**
@@ -49,6 +50,28 @@ class Routes
     public static function getRoutes() : array
     {
         return self::$routes;
+    }
+
+
+    /**
+     * This will return a route element of the indicated key.
+     * If not, it will return a system exception
+     * @param string $key
+     * @param string $method
+     * @return Route
+     * @throws SystemException
+     */
+    public static function findRoute(string $key , string $method ) : Route{
+        $routes = self::getRoutes();
+        $key = $method . self::IDENTIFIER_SEPARATOR . $key;
+
+        if( isset( $routes[ $key ] ) ){
+            return $routes[ $key ];
+        }else{
+            throw new SystemException( "Route - " . $key . " - could not be found." );
+        }
+
+
     }
 
 }
