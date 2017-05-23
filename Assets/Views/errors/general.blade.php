@@ -11,7 +11,7 @@
 <div class="cover">
     <h1>Webservice currently unavailable <small>Error 500</small></h1>
     <p class="lead">An unexpected condition was encountered.<br />Our service team has been dispatched to bring it back online.</p>
-    <p class="lead">{{ @$err->getMessage()  }} in {{ $err->getFile() }} line {{ $err->getLine() }}</p>
+    <p class="lead">{{ @$err->getPrevious()->getMessage()  }} in {{ @$err->getPrevious()->getFile() }} line {{ $err->getPrevious()->getLine() }}</p>
 </div>
 </body>
 </html>
