@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <div class="about-us">
-                        <p>DIGITAL KATACLYSM is a Framework inspired in applications such as Laravel and other MVC frameworks. It tries to stay as loyal to the Laravel structure and at the same time have its own magic in it. It is even using some of the most popular Laravel packages, but trying to use only the necessary ones.</p>
+                        <p>DIGITAL KATACLYSM (Current version {{ \Kataclysm\Kataclysm::CURRENT_VERSION }}) is a Framework inspired in applications such as Laravel and other MVC frameworks. It tries to stay as loyal to the Laravel structure and at the same time have its own magic in it. It is even using some of the most popular Laravel packages, but trying to use only the necessary ones.</p>
                         <p>
                             Current Environment:
                         </p>

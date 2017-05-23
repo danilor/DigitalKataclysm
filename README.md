@@ -56,6 +56,17 @@ Easier way to debug the code. Belong to the [Illiminate Support](https://packagi
 
 We are using the exact same .htaccess file that Laravel provides.
 
+## Why don't just use Laravel/Lumen/CakePHP? What its wrong with them?
+
+Even when there are a lot of frameworks, libraries and free code out there, and they can be used by Digital Kataclysm, I decided to make
+some of them by my own. For example the routes management is being made from scratch (instead of using for example
+[Slim Framework](https://www.slimframework.com/)), and this is because we want to make a lighter one instead of
+keep adding libraries to the project composer (and also, learn in the process).
+
+We know that there are a lot of libraries out there that make most of the work we are doing here; like the great 
+example: [Laravel](https://laravel.com/) that includes everything you will see here; but maybe it is including 
+code, libraries and functions that we will never use, or worse, we will never understand how they work.
+
 ## Want to help me?
 
 If you are willing to spend some time checking the code and adding improvements, 

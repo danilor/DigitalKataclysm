@@ -15,6 +15,8 @@ use Kataclysm\System\SystemException;
 class Kataclysm
 {
 
+    const CURRENT_VERSION = 0.8;
+
     /**
      * This is the namespace for the controllers
      * @var string
