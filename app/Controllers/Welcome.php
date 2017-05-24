@@ -27,6 +27,8 @@ class Welcome extends Controller
      * This method will only show a youtube video to show how the dynamic url works
      */
     public function showYoutubeVideo(){
-        return $this->view( "start.yvideo" );
+        $data = [];
+        $data["youtube_id"]     =       segment(2);
+        return $this->view( "start.yvideo" , $data );
     }
 }
