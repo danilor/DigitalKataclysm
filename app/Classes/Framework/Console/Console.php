@@ -78,7 +78,9 @@ class Console
     const MESSAGE_TYPE_ATTENTION    =   'ATTENTION';
 
     /**
-     * General messages
+     * General messages. You can pass the message and the type. We have some predefined types, but
+     * in the future we can make a function that allows us to send the color by ourselves.
+     * But for now, the 5 types we have here are enough.
      * @param $message
      * @param string $type
      * @return string
@@ -103,11 +105,14 @@ class Console
                 $out = "[0;37m"; //Blue background
                 break;
         }
+        /**
+         * I am not fully sure what is the chr(27) doing. Seems like I will have to trust to somebody else this time.
+         */
         return chr(27) . "$out" . $message . chr(27) . "[0m" . PHP_EOL;
     }
 
-
     /**
+     * This will get the string text and print it.
      * @param $text
      * @param string $type
      */

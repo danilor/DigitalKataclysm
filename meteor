@@ -1,5 +1,17 @@
 #!/usr/bin/env php
 <?php
+
+/**
+ |---------------------------------------------------------------|
+ | METEOR is a CLI PHP script that allows you to create          |
+ | shell scripting apps, and also allowing you to manually       |
+ | execute them or have a crontab to work for you on them.       |
+ | The idea came originally from the artisan command (from       |
+ | Laravel) but allowing us to create a simpler and smaller      |
+ | version.                                                      |
+ |---------------------------------------------------------------|
+ */
+
 require __DIR__ . '/autoload.php';
 
 /**
@@ -9,10 +21,12 @@ require __DIR__ . '/autoload.php';
 $Console = new Kataclysm\Console\Console( $argv );
 
 /**
- * Lets validate the information
+ * Lets validate the information of the console. The basic call must include the name of the consolo command we want to execute.
  */
-
 if( !$Console -> validate() ){
+    /**
+     * If there was an error, then lets show an error message to the screen.
+     */
     \Kataclysm\Console\Console::print_message( "Command missing or does not exist", \Kataclysm\Console\Console::MESSAGE_TYPE_ERROR );
 }else{
     // Seems good? I guess we can execute
@@ -26,6 +40,5 @@ if( !$Console -> validate() ){
         \Kataclysm\Console\Console::print_message( $err->getMessage() , \Kataclysm\Console\Console::MESSAGE_TYPE_ERROR );
     }
 }
-
 echo PHP_EOL;
 ?>

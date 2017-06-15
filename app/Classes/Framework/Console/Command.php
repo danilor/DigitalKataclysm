@@ -25,10 +25,19 @@ abstract class Command
      * @var int
      */
     private $header_size = 50;
+    /**
+     * @var int
+     */
     private $footer_size = 39;
 
+    /**
+     * @var string
+     */
     private $box_symbol = '|';
 
+    /**
+     * @var string
+     */
     protected $name = '';
 
     /**
@@ -51,6 +60,9 @@ abstract class Command
 
     }
 
+    /**
+     *
+     */
     public function process(){
         $this -> startTime();
         $this -> printHeader();
@@ -110,7 +122,6 @@ abstract class Command
         if( $top_space ){
             $this -> mes( " " );
         }
-
 
 
         /**

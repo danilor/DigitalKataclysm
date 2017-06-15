@@ -160,8 +160,6 @@ class Kataclysm
      */
     public function execute(){
         return $this->renderSimpleRoute();
-
-
     }
 
     /**
