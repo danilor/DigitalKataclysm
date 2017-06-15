@@ -1,5 +1,4 @@
 <?php
-
 /**
  * This is the main console class.
  * It should work similar to artisan commands, but with a different approach on creating new commands.
@@ -9,7 +8,6 @@
  */
 
 namespace Kataclysm\Console;
-
 
 /**
  * Class Console

@@ -17,9 +17,7 @@ require __DIR__ . '/autoload.php';
 /**
  * We create a new Console object. This will help us to manage everything about the consoles.
  */
-
 $Console = new Kataclysm\Console\Console( $argv );
-
 /**
  * Lets validate the information of the console. The basic call must include the name of the consolo command we want to execute.
  */

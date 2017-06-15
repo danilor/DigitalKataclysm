@@ -1,12 +1,9 @@
 <?php
 
-
 namespace Commands;
-
 
 class information extends \Kataclysm\Console\Command
 {
-
     protected $name = 'Site Information';
     protected $description = 'This command shows the information of the site';
 

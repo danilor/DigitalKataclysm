@@ -64,6 +64,7 @@ that works in a very similar way. What is the advantage? meteor is simpler and f
 of the funcionality that *artisan* has, but it has enough power to handle most of the most basic functions you 
 would want.
 
+
 ## Why don't just use Laravel/Lumen/CakePHP? What its wrong with them?
 
 Even when there are a lot of frameworks, libraries and free code out there, and they can be used by Digital Kataclysm, I decided to make
@@ -126,6 +127,14 @@ Copyright 2017 | San José, Costa Rica
 - [ ] Add view for JSON type
 - [ ] Add view for XML type
 
+
+## Contributors
+
+- Danilo Ramírez
+
+Yes yes I know, sometimes I write "we" and other times I write "I", sometimes I feel kind of lonely in this project :D. 
+**Don't judge me**.
+
 ## Technologies
 
 ![Composer](https://www.dev-metal.com/wp-content/uploads/2013/12/composer-logo-1-100x100.jpg)
@@ -133,3 +142,5 @@ Copyright 2017 | San José, Costa Rica
 ![JQUERY](https://www.audero.it/blog/wp-content/uploads/2013/09/jQuery-logo.png)
 ![BOOTSTRAP](http://www.nebula-marketing.co.uk/assets/images/bootstrap-logo.jpg)
 ![FONT-AWESOME](https://iconscout.com/images/profile/small/font-awesome-3a2d482d42d7b1ee-58398de03e379-100x100.jpg)
+
+

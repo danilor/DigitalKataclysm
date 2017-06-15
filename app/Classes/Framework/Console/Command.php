@@ -71,7 +71,6 @@ abstract class Command
         $this -> printFooter();
     }
 
-
     /**
      * It will set up the start time
      */
@@ -122,8 +121,6 @@ abstract class Command
         if( $top_space ){
             $this -> mes( " " );
         }
-
-
         /**
          * If the title is not even, we have to add one point to the header lenght to we can center the information
          */
@@ -146,7 +143,6 @@ abstract class Command
         $this -> success( $this -> box_symbol . str_repeat("*" , $this->footer_size) . $this -> box_symbol );
     }
 
-
     /**
      * it will set up the end time
      */
@@ -161,7 +157,6 @@ abstract class Command
     {
         return (int)$this -> end ->getTimestamp() - $this -> start ->getTimestamp();
     }
-
 
     /**
      * @param $message
@@ -205,12 +200,9 @@ abstract class Command
         \Kataclysm\Console\Console::print_message( $message, \Kataclysm\Console\Console::MESSAGE_TYPE_ERROR );
     }
 
-
     /**
      * This is the main function that it will call
      * @return mixed
      */
     abstract function execute();
-
-
 }
