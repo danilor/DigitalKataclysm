@@ -40,4 +40,6 @@ create_route( Request::METHOD_GET           ,           "/mygithub"         ,   
 
 create_route( Request::METHOD_GET           ,           "/yvideo/{id:}/"     ,       "Welcome"           ,       "showYoutubeVideo" );
 
+create_route( Request::METHOD_GET           ,           "/database_example/" ,       "Welcome"           ,       "showDatabase" );
+
 

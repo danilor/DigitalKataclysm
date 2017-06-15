@@ -71,7 +71,7 @@ require __DIR__ . '/vendor/autoload.php';
 |
 | We are using the global variables just in case. It should not impact that much on the app performance
 */
-global $APP , $REQUEST , $BLADE;
+global $APP , $REQUEST , $BLADE , $DB;
 /*
 |--------------------------------------------------------------------------
 | APP is the main application instance
@@ -90,4 +90,12 @@ $APP = \Kataclysm\Kataclysm::getInstance( __DIR__ );
 $REQUEST        =       $APP    ->  getRequest();
 // Now lets set up the blade system
 $BLADE          =       $APP    ->  getBlade();
+
+/*
+|--------------------------------------------------------------------------
+| DB
+|--------------------------------------------------------------------------
+|
+| Now we create the database connection
+*/
 

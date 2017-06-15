@@ -109,7 +109,7 @@ Copyright 2017 | San José, Costa Rica
     - [X] Error and not found system (pages 500 and 404) (Still not working as I would like it to work)
 - [ ] User session class
 - [ ] Framework integration
-- [ ] Database Global
+- [X] Database Global
 - [ ] Integrated validations
 - [ ] Create logo
 - [ ] Closures
