@@ -90,12 +90,3 @@ $APP = \Kataclysm\Kataclysm::getInstance( __DIR__ );
 $REQUEST        =       $APP    ->  getRequest();
 // Now lets set up the blade system
 $BLADE          =       $APP    ->  getBlade();
-
-/*
-|--------------------------------------------------------------------------
-| DB
-|--------------------------------------------------------------------------
-|
-| Now we create the database connection
-*/
-
