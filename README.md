@@ -143,4 +143,8 @@ Yes yes I know, sometimes I write "we" and other times I write "I", sometimes I 
 ![BOOTSTRAP](http://www.nebula-marketing.co.uk/assets/images/bootstrap-logo.jpg)
 ![FONT-AWESOME](https://iconscout.com/images/profile/small/font-awesome-3a2d482d42d7b1ee-58398de03e379-100x100.jpg)
 
-
+- Composer
+- PHP
+- Jquery
+- Bootstrap
+- FontAwesome
