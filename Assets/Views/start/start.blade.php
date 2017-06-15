@@ -18,6 +18,6 @@
 
     <p>This is a temporal landing page. You can wait for the most awesome landing page you have ever see in the future, so this one is going to be replaced.</p>
     <p>
-        In the meantime, why don't you check my <a href="/mygithub">Github account</a>? Maybe you can find something of your interest! Or maybe you want to see a <a href="/yvideo/k9yQEG7mlTU">nice video</a> that shows you how the dynamic URL works!
+        In the meantime, why don't you check my <a href="/mygithub">Github account</a>? Maybe you can find something of your interest! Or maybe you want to see a <a href="/yvideo/wvO3zJaNBjs">nice video</a> that shows you how the dynamic URL works!
     </p>
 @stop
