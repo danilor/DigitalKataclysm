@@ -104,18 +104,18 @@ class Request
         /**
          * Reading the request method. It must be in upper
          */
-        $this->method           =           strtoupper( @$_SERVER['REQUEST_METHOD'] );
+        if( isset($_SERVER['REQUEST_METHOD']) ) $this->method           =           strtoupper( @$_SERVER['REQUEST_METHOD'] );
 
         /**
          * Reading the Current script
          */
-        $this->self             =           @$_SERVER["PHP_SELF"];
+        if( isset($_SERVER['PHP_SELF']) ) $this->self             =           @$_SERVER["PHP_SELF"];
 
         /**
          * Getting the server name and address
          */
-        $this->server_address   =           $_SERVER["SERVER_ADDR"];
-        $this->server_name      =           $_SERVER["SERVER_NAME"];
+        if( isset($_SERVER['SERVER_ADDR']) ) $this->server_address   =           $_SERVER["SERVER_ADDR"];
+        if( isset($_SERVER['SERVER_NAME']) ) $this->server_name      =           $_SERVER["SERVER_NAME"];
 
         /**
          * Setting up if this was a secure connection
@@ -127,12 +127,12 @@ class Request
         /**
          * Get the request URL
          */
-        $this->uri                              =           $_SERVER["REQUEST_URI"];
+        if( isset($_SERVER['REQUEST_URI']) ) $this->uri                              =           $_SERVER["REQUEST_URI"];
 
         /**
          * Get the query string
          */
-        $this->query_string                     =           $_SERVER['QUERY_STRING'];
+        if( isset($_SERVER['QUERY_STRING']) ) $this->query_string                     =           $_SERVER['QUERY_STRING'];
 
         /**
          * Get the segments

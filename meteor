@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+require __DIR__ . '/autoload.php';
+
+/**
+ * We create a new Console object. This will help us to manage everything about the consoles.
+ */
+
+$Console = new Kataclysm\Console\Console( $argv );
+
+/**
+ * Lets validate the information
+ */
+
+if( !$Console -> validate() ){
+    \Kataclysm\Console\Console::print_message( "Command missing or does not exist", \Kataclysm\Console\Console::MESSAGE_TYPE_ERROR );
+}else{
+    // Seems good? I guess we can execute
+    try{
+        $Console -> getCommandClass() -> process();
+    }catch (\Error $err){
+        \Kataclysm\Console\Console::print_message( "An error happened", \Kataclysm\Console\Console::MESSAGE_TYPE_ERROR );
+        \Kataclysm\Console\Console::print_message( $err->getMessage() , \Kataclysm\Console\Console::MESSAGE_TYPE_ERROR );
+    }catch ( \Exception $err ){
+        \Kataclysm\Console\Console::print_message( "An exception happened", \Kataclysm\Console\Console::MESSAGE_TYPE_ERROR );
+        \Kataclysm\Console\Console::print_message( $err->getMessage() , \Kataclysm\Console\Console::MESSAGE_TYPE_ERROR );
+    }
+}
+
+echo PHP_EOL;
+?>

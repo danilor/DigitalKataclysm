@@ -56,6 +56,14 @@ Easier way to debug the code. Belong to the [Illiminate Support](https://packagi
 
 We are using the exact same .htaccess file that Laravel provides.
 
+### Shell scripting?
+
+Laravel is famous for using a SHELL scripting called *Artisan* where you can code commands to be executed manually 
+or using crontab. Well, we didn't want to be left behind so Digital Kataclysm has a scripting system called *meteor*
+that works in a very similar way. What is the advantage? meteor is simpler and faster because it does not have a lot
+of the funcionality that *artisan* has, but it has enough power to handle most of the most basic functions you 
+would want.
+
 ## Why don't just use Laravel/Lumen/CakePHP? What its wrong with them?
 
 Even when there are a lot of frameworks, libraries and free code out there, and they can be used by Digital Kataclysm, I decided to make
@@ -111,6 +119,8 @@ Copyright 2017 | San José, Costa Rica
 - [ ] Framework integration
 - [X] Database Global
 - [ ] Integrated validations
+- [X] Console commands
+    - [ ] Working options
 - [ ] Create logo
 - [ ] Closures
 - [ ] Add view for JSON type

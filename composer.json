@@ -14,7 +14,8 @@
     ],
     "classmap": [
       "app/Classes",
-      "app/Controllers"
+      "app/Controllers",
+      "commands"
     ],
     "psr-4": {
       "Kataclysm\\": "app"
