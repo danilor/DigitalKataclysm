@@ -1373,3 +1373,12 @@ fieldset {
     font-size: 14px;
     text-align: center;
 }
+
+
+/**
+    ADDED BY DANILO
+ */
+
+.dropdown-menu li a:hover{
+    color:black!important;
+}

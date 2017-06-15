@@ -31,7 +31,7 @@ use Kataclysm\System\SystemNotFound;
 class Kataclysm
 {
 
-    const CURRENT_VERSION = 0.8;
+    const CURRENT_VERSION = 0.9;
 
     /**
      * This is the namespace for the controllers
