@@ -16,8 +16,13 @@ class information extends \Kataclysm\Console\Command
         $this -> mes( "System information taken from the _SERVER variable:" );
         $this -> space();
 
-        foreach( $_SERVER AS $key =>  $server ){
-            if( is_string( $server )) $this -> mes ( " - " .$key . ' = ' . str_limit( $server , 60 ) );
+        if( $this->param( "var" ) !== "" ){
+            if( isset( $_SERVER[ $this->param( "var" ) ] ) && is_string( $_SERVER[ $this->param( "var" ) ] ))
+                    $this -> mes ( " - " . $this->param( "var" ) . ' = ' . str_limit( $_SERVER[ $this->param( "var" ) ] , 60 ) );
+        }else{
+            foreach( $_SERVER AS $key =>  $server ){
+                if( is_string( $server )) $this -> mes ( " - " .$key . ' = ' . str_limit( $server , 60 ) );
+            }
         }
     }
 }

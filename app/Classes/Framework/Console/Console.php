@@ -16,6 +16,12 @@ namespace Kataclysm\Console;
 class Console
 {
 
+    const PARAMETER_DIVIDER = '=';
+    const PARAMETER_STARTER = '--';
+
+    /**
+     * @var array
+     */
     private $arguments = [];
 
     private $namespace_command = '\\Commands\\';
@@ -52,7 +58,8 @@ class Console
     }
 
     /**
-     * This will return the command object itself
+     * This will return the command object itself.
+     * Before returning it, we are setting up the parameters
      * @return Command
      */
     public function getCommandClass() : \Kataclysm\Console\Command
@@ -61,6 +68,34 @@ class Console
         $class =  $this -> namespace_command . $command_name;
         $class_object = null;
         eval('$class_object = new '.$class.';');
+
+        $parameters = $this -> arguments;
+
+        $params = []; // This are going to be the parameters we are going to add to the Command object
+
+        /**
+         * Lets delete the first and second option because that is the meteor and the command name
+         */
+        unset( $parameters[0] );
+        unset( $parameters[1] );
+        /**
+         * Now that we clean the parameters, lets divide them into real parameters
+         */
+        foreach( $parameters AS $key => $parameter ){
+            // We are only accepting parameters that follow the structure of -key=value
+            $aux = explode( self::PARAMETER_DIVIDER , $parameter );
+            if( count($aux) === 2 ){
+                // We are only accepting parameters that are in the right format and the split generates two areas
+                if( starts_with( $aux[0] , self::PARAMETER_STARTER ) ){
+                    // The parameter must start with the symbol --
+                    $key        =   trim( str_replace(self::PARAMETER_STARTER , "" , $aux[0] ) );
+                    $value      =   trim( $aux[1] );
+                    // Now lets add the exact parameter to the values
+                    $params[ $key ] =   $value;
+                }
+            }
+        }
+        $class_object -> setParameters( $params ); // Now set the parameters
         return $class_object;
     }
 

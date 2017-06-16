@@ -36,6 +36,12 @@ abstract class Command
     private $box_symbol = '|';
 
     /**
+     * The list of parameters of this command
+     * @var array
+     */
+    private $parameters = [];
+
+    /**
      * @var string
      */
     protected $name = '';
@@ -198,6 +204,44 @@ abstract class Command
      */
     public function error($message ){
         \Kataclysm\Console\Console::print_message( $message, \Kataclysm\Console\Console::MESSAGE_TYPE_ERROR );
+    }
+
+    /**
+     * @return array
+     */
+    public function getParameters(): array
+    {
+        return $this->parameters;
+    }
+    /**
+     * @param array $parameters
+     */
+    public function setParameters(array $parameters)
+    {
+        $this->parameters = $parameters;
+    }
+
+    /**
+     * This will get one single parameter
+     * @param $key
+     * @return string
+     */
+    protected function getParameter( string $key ) : string
+    {
+        if( isset( $this->parameters[ $key ] ) ){
+            return $this->parameters[ $key ];
+        }
+        return ''; // This is the default option
+    }
+
+    /**
+     * Alias for getParameter
+     * @param string $key
+     * @return string
+     */
+    protected function param( string $key ) : string
+    {
+        return $this -> getParameter( $key );
     }
 
     /**
