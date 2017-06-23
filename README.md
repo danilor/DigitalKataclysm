@@ -141,7 +141,7 @@ Yes yes I know, sometimes I write "we" and other times I write "I", sometimes I 
 ![PHP](https://www.dev-metal.com/wp-content/uploads/2014/02/php-logo-1-100x100.jpg)
 ![JQUERY](https://www.audero.it/blog/wp-content/uploads/2013/09/jQuery-logo.png)
 ![BOOTSTRAP](http://www.nebula-marketing.co.uk/assets/images/bootstrap-logo.jpg)
-![FONT-AWESOME](https://iconscout.com/images/profile/small/font-awesome-3a2d482d42d7b1ee-58398de03e379-100x100.jpg)
+![FONT-AWESOME](https://www.blognone.com/sites/default/files/styles/thumbnail/public/news-thumbnails/logo_51.png)
 
 - Composer
 - PHP
