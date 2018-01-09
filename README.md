@@ -56,6 +56,12 @@ Easier way to debug the code. Belong to the [Illiminate Support](https://packagi
 
 We are using the exact same .htaccess file that Laravel provides.
 
+### Validation
+
+Digital Kataclysm implements a strong and robust Validation Class called *GUMP*. You can find more information about this Library in the [here](https://github.com/Wixel/GUMP). It works really similar to the *Laravel Integrated Validation Class*, so for those Laravel Developers won't be a problem to migrate to this library. Also, we are implementing some wrappers to allow the coder to access this functions easier.
+
+We provide a form example in the main installation that shows exactly how this library should work in your project.
+
 ### Shell scripting?
 
 Laravel is famous for using a SHELL scripting called *Artisan* where you can code commands to be executed manually 
@@ -119,13 +125,15 @@ Copyright 2017 | San José, Costa Rica
 - [ ] User session class
 - [ ] Framework integration
 - [X] Database Global
-- [ ] Integrated validations
+- [X] Integrated validations
 - [X] Console commands
     - [ ] Working options
 - [ ] Create logo
 - [ ] Closures
-- [X] Add view for JSON type
-- [X] Add view for XML type
+- [X] Responses
+    - [X] View JSON type
+    - [X] View XML type
+    - [X] Redirect Response type
 
 
 ## Contributors

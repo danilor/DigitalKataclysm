@@ -260,13 +260,16 @@ class Request
         return $this->secure_connection;
     }
 
-    /**
-     * @param bool $autocomplete If true, and it the URI does not have the final /, it will add it
-     * @return string
-     */
-    public function getUri( $autocomplete = true ) : string
+	/**
+	 * @param bool $autocomplete If true, and it the URI does not have the final /, it will add it
+	 * @param bool $hide_query_string
+	 *
+	 * @return string
+	 */
+    public function getUri( bool $autocomplete = true  ) : string
     {
-        $url = $this->uri;
+
+    	$url = $this->uri;
         if( $autocomplete ){
             if( substr($url, -1) != '/' ){
                 $url .= '/';

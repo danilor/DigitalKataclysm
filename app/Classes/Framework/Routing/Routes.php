@@ -62,13 +62,18 @@ class Routes
      * @return Route
      * @throws SystemNotFound
      */
-    public static function findRoute(string $key , string $method ) : Route{
+    public static function findRoute(string $key , string $method , bool $clean_query_string = true ) : Route{
         $routes = self::getRoutes();
         //dd( $routes , $key );
         /**
          * WE have to search every route individually
          * TODO: Make a better way to search the rute
          */
+
+        if( $clean_query_string ){ // We are cleaning the URL so it wont affect the search if it has a query string.
+	        $key = strtok($key, '?');
+        }
+
         foreach( $routes AS $route ){
             $matches = null;
             $start_ending_character = '/';

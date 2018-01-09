@@ -35,6 +35,10 @@ abstract class Response
          */
         if( $response instanceof ResponseView || $response instanceof ResponseJson || $response instanceof ResponseXML ) {
 	        return $response->execute();
+        }elseif( $response instanceof ResponseRedirect){ // The response redirect works a little different from the other ones.
+        	$url = $response->execute();
+        	header( "Location: " . $url );
+        	exit();
         }else{
             /**
              * If it is not in the response lists we accept, then we throw an error

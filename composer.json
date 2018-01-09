@@ -6,7 +6,8 @@
   "require": {
     "illuminate/database": "^5.1",
     "philo/laravel-blade": "3.*",
-    "spatie/array-to-xml":"@dev"
+    "spatie/array-to-xml":"@dev",
+    "wixel/gump": "dev-master"
   },
   "autoload": {
     "files":[

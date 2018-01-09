@@ -65,3 +65,14 @@ function create_route($method , $uri , $class , $class_method ){
     // Add the route to the routes list
     Kataclysm\Routing\Routes::addRoute( $Route );
 }
+
+
+/**
+ * This method will return the GUMP object for the validation
+ * @return GUMP
+ */
+function getValidator() : \GUMP
+{
+	$g = new \GUMP();
+	return $g;
+}

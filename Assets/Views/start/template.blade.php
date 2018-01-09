@@ -19,6 +19,7 @@
                                         <li><a href="/database_example"><span class="fa fa-database"></span> {{ "DB" }}</a></li>
                                         <li><a target="_blank" href="/json_example"> <span class="fa fa-code"></span> {{ "JSON Example" }}</a></li>
                                         <li><a target="_blank" href="/xml_example"> <span class="fa fa-code"></span> {{ "XML Example" }}</a></li>
+                                        <li><a href="/form_example"> <i class="fa fa-paperclip" aria-hidden="true"></i> {{ "Form Example" }}</a></li>
 
                                     </ul>
                                 </li>

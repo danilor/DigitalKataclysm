@@ -176,6 +176,9 @@ class Kataclysm
              * and we are capturing that error almost at the end of this function
              */
             $route = Routes::findRoute( $this->getRequest()->getUri() , $this->getRequest()->getMethod() );
+
+
+
             /**
              * We get the class name and the method name. The class name should
              * come with the namespace
