@@ -135,6 +135,7 @@ Copyright 2017 | San José, Costa Rica
     - [X] View XML type
     - [X] Redirect Response type
 - [ ] Crypt Class
+- [ ] Angular compatibility
 
 ## Contributors
 
