@@ -1,6 +1,7 @@
 <?php
 namespace Kataclysm\Data;
 
+use Kataclysm\Responses\ResponseJson;
 use Kataclysm\Responses\ResponseView;
 use Kataclysm\System\SystemNotFound;
 
@@ -25,7 +26,7 @@ abstract class Controller
      */
     public function view(string $viewName , array $data = [] ) : ResponseView
     {
-        $request = request(); // Lets bring the request
+        //$request = request(); // Lets bring the request
         $response = new ResponseView();
         $response -> setData( $data );
         $response->setView( $viewName );

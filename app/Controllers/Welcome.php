@@ -48,4 +48,23 @@ class Welcome extends Controller
         $data[ "names" ] = $name;
         return $this->view( "start.database" , $data );
     }
+
+
+	/**
+	 * It will show the example of a JSON Request page
+	 * @return \Kataclysm\Responses\ResponseJson
+	 */
+    public function showJSON() : \Kataclysm\Responses\ResponseJson
+    {
+    	$response = new \Kataclysm\Responses\ResponseJson();
+    	$response -> setData(
+    		[
+    		    "Example"   => true,
+			    "Response"  => true,
+		    ]
+	    );
+
+    	return $response;
+    }
+
 }

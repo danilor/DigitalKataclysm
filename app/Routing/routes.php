@@ -36,10 +36,12 @@ $Route -> setMethodName( "start" );
 Routes::addRoute( $Route );
 
 // Now lets create a rute using the simplified method
-create_route( Request::METHOD_GET           ,           "/mygithub"         ,       "Welcome"           ,       "showMyGithub" );
+create_route( Request::METHOD_GET           ,           "/mygithub"             ,       "Welcome"           ,       "showMyGithub" );
 
-create_route( Request::METHOD_GET           ,           "/yvideo/{id:}/"     ,       "Welcome"           ,       "showYoutubeVideo" );
+create_route( Request::METHOD_GET           ,           "/yvideo/{id:}/"        ,       "Welcome"           ,       "showYoutubeVideo" );
 
-create_route( Request::METHOD_GET           ,           "/database_example/" ,       "Welcome"           ,       "showDatabase" );
+create_route( Request::METHOD_GET           ,           "/database_example/"    ,       "Welcome"           ,       "showDatabase" );
+
+create_route( Request::METHOD_GET           ,           "/json_example/"        ,       "Welcome"           ,       "showJSON" );
 
 

@@ -33,8 +33,8 @@ abstract class Response
         /**
          * We work with the response view now
          */
-        if( $response instanceof ResponseView ){
-            return $response->execute();
+        if( $response instanceof ResponseView || $response instanceof ResponseJson ) {
+	        return $response->execute();
         }else{
             /**
              * If it is not in the response lists we accept, then we throw an error

@@ -124,7 +124,7 @@ Copyright 2017 | San José, Costa Rica
     - [ ] Working options
 - [ ] Create logo
 - [ ] Closures
-- [ ] Add view for JSON type
+- [X] Add view for JSON type
 - [ ] Add view for XML type
 
 
