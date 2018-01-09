@@ -9,7 +9,7 @@
     <p>
     <center>
         <strong>
-            {{ env("ENV") }} | KEY:  {{ config("app.app_key") }}
+            {{ f_env("ENV") }} | KEY:  {{ config("app.app_key") }}
         </strong>
     </center>
     </p>

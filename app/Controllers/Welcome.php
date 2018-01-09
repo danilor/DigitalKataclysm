@@ -63,8 +63,23 @@ class Welcome extends Controller
 			    "Response"  => true,
 		    ]
 	    );
-
     	return $response;
     }
+
+	/**
+	 * It will show the example of a XML Request page
+	 * @return \Kataclysm\Responses\ResponseJson
+	 */
+	public function showXML() : \Kataclysm\Responses\ResponseXML
+	{
+		$response = new \Kataclysm\Responses\ResponseXML();
+		$response -> setData(
+			[
+				"Example"   => true,
+				"Response"  => true,
+			]
+		);
+		return $response;
+	}
 
 }

@@ -18,6 +18,7 @@
                                         <li><a href="/yvideo/r0ccFg1S7OA"><span class="fa fa-youtube-play"></span> {{ "Youtube Video" }}</a></li>
                                         <li><a href="/database_example"><span class="fa fa-database"></span> {{ "DB" }}</a></li>
                                         <li><a target="_blank" href="/json_example"> <span class="fa fa-code"></span> {{ "JSON Example" }}</a></li>
+                                        <li><a target="_blank" href="/xml_example"> <span class="fa fa-code"></span> {{ "XML Example" }}</a></li>
 
                                     </ul>
                                 </li>

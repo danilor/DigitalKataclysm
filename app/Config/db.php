@@ -9,12 +9,12 @@
 |-----------------------------------------------------------------|
 */
 return [
-    "driver"                =>          env("DB_DRIVER",'mysql'),
-    "host"                  =>          env("DB_HOST" , ''),
-    "database"              =>          env("DB_NAME" , ''),
-    "username"              =>          env("DB_USER" , ''),
-    "password"              =>          env("DB_PASS" , ''),
-    "charset"               =>          env("DB_CHARSET" , 'utf8'),
-    "collation"             =>          env("DB_COLLATION" , 'utf8_unicode_ci'),
-    "prefix"                =>          env("DB_PREFIX" , ''),
+    "driver"                =>          f_env("DB_DRIVER",'mysql'),
+    "host"                  =>          f_env("DB_HOST" , ''),
+    "database"              =>          f_env("DB_NAME" , ''),
+    "username"              =>          f_env("DB_USER" , ''),
+    "password"              =>          f_env("DB_PASS" , ''),
+    "charset"               =>          f_env("DB_CHARSET" , 'utf8'),
+    "collation"             =>          f_env("DB_COLLATION" , 'utf8_unicode_ci'),
+    "prefix"                =>          f_env("DB_PREFIX" , ''),
 ];

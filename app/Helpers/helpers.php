@@ -11,7 +11,7 @@
  * @return string
  * @see \Config
  */
-function env( string $key , string $default = '' ) : string{
+function f_env( string $key , string $default = '' ) : string{
     return \Config::env( $key , $default );
 }
 

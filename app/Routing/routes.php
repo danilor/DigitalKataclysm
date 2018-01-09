@@ -44,4 +44,6 @@ create_route( Request::METHOD_GET           ,           "/database_example/"    
 
 create_route( Request::METHOD_GET           ,           "/json_example/"        ,       "Welcome"           ,       "showJSON" );
 
+create_route( Request::METHOD_GET           ,           "/xml_example/"         ,       "Welcome"           ,       "showXML" );
+
 

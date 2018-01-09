@@ -33,7 +33,7 @@ abstract class Response
         /**
          * We work with the response view now
          */
-        if( $response instanceof ResponseView || $response instanceof ResponseJson ) {
+        if( $response instanceof ResponseView || $response instanceof ResponseJson || $response instanceof ResponseXML ) {
 	        return $response->execute();
         }else{
             /**

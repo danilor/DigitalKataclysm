@@ -12,10 +12,10 @@ return [
     /**
      * The APP KEY of the application. This will be used for encoding and encrypting options.
      */
-    "app_key"               =>          env("KEY",''),
+    "app_key"               =>          f_env("KEY",''),
 
     /**
      * The APP URL.
      */
-    "app_url"               =>          env("URL" , 'http://localhost/'),
+    "app_url"               =>          f_env("URL" , 'http://localhost/'),
 ];
