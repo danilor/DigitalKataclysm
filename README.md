@@ -100,7 +100,7 @@ not suitable for your needs, so why just don't take this one and make it exactly
 All the code made in this repository was made by Danilo Ramírez Mattey. Please use it carefully 
 and be sure to credit me if you are using any of it, including independent classes.
 
-Copyright 2017 | San José, Costa Rica
+Copyright 2010-2018 | San José, Costa Rica
 
 ## Instalation
 
