@@ -15,7 +15,7 @@
     </p>
 
     <p>
-        This is a working process, so its normal find some issues and errors. If you find something that you consider that slipped from my hands, please let me know.
+        This is a working process, so its normal to find some issues and errors. If you find something that you consider that slipped from my hands, please let me know.
     </p>
 
     <p>This is a temporal landing page. You can wait for the most awesome landing page you have ever see in the future, so this one is going to be replaced.</p>
