@@ -11,7 +11,7 @@
  * @return string
  * @see \Config
  */
-function env( string $key , string $default = '' ) : string{
+function f_env( string $key , string $default = '' ) : string{
     return \Config::env( $key , $default );
 }
 
@@ -64,4 +64,15 @@ function create_route($method , $uri , $class , $class_method ){
     $Route -> setMethodName( $class_method );
     // Add the route to the routes list
     Kataclysm\Routing\Routes::addRoute( $Route );
+}
+
+
+/**
+ * This method will return the GUMP object for the validation
+ * @return GUMP
+ */
+function getValidator() : \GUMP
+{
+	$g = new \GUMP();
+	return $g;
 }

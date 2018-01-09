@@ -92,8 +92,9 @@ class ResponseView extends Response
         /**
          * if there is actual data
          */
+        //dd( $this->getData() );
         if( COUNT( $this->getData() ) > 0 ){
-            $view->withData( $this->getData() );
+            $view->with( $this->getData() );
         }
 
         return $view->render();

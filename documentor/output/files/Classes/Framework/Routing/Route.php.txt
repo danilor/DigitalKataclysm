@@ -11,6 +11,14 @@ class Route
 {
 
     /**
+     * The following constants were made to analize the URLs for required and optional parameters
+     */
+    const PREG_REQUIRED = '/\{[^\:]*:\}/';
+    const PREG_OPTIONAL = '/\{[^\:]*\?\}/';
+    const PREG_REPLACE_REQUIRED = '[^\/]+';
+    const PREG_REPLACE_OPTIONAL = '[^\/]*';
+
+    /**
      * @var string
      */
     private $method = 'GET';
@@ -18,6 +26,10 @@ class Route
      * @var string
      */
     private $url = '';
+    /**
+     * @var string
+     */
+    private $regex_url = '';
     /**
      * @var string
      */
@@ -62,7 +74,23 @@ class Route
      */
     public function setUrl(string $url)
     {
+
+        /**
+         * If the URL does not end with a / we will add it
+         */
+        if( substr($url, -1) != '/' ){
+            $url .= '/';
+        }
         $this->url = $url;
+        /**
+         * We are going to make a replace to turn those "easy to read" patterns into preg match pattens
+         */
+
+        $this->regex_url = $url;
+        $this->regex_url = str_replace('/' , '\/' , $this->regex_url) ;
+        $this->regex_url = preg_replace([  self::PREG_REQUIRED , self::PREG_OPTIONAL ] , [  self::PREG_REPLACE_REQUIRED , self::PREG_REPLACE_OPTIONAL ], $this->regex_url);
+        $this->regex_url .= '?'; // We are adding an ? at the end of the regular expression to indicate that we don't care if it ends on / or not
+        //$this->regex_url = preg_replace(self::PREG_OPTIONAL , self::PREG_REPLACE_OPTIONAL, $url);
     }
 
     /**
@@ -112,6 +140,16 @@ class Route
     {
         $this->function = $function;
     }
+
+    /**
+     * @return string
+     */
+    public function getRegexUrl(): string
+    {
+        return $this->regex_url;
+    }
+
+
 
 
 
