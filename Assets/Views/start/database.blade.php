@@ -4,7 +4,7 @@
         This is a database test. This database is hosted in a free database site, so its posible that the database does not exist when you are testing this.
     <p>
     <div>
-        @if( isset($offices) && count($offices) > 0 )
+        @if( isset($names) && count($names) > 0 )
             <table width="100%" class="table table-bordered table-hover table-hovered table-responsive">
                 <thead>
                     <tr>
@@ -13,10 +13,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                        @foreach( $offices AS $office )
+                        @foreach( $names AS $name )
                             <tr>
-                                <td>{{ $office -> id }}</td>
-                                <td>{{ $office -> name }}</td>
+                                <td>{{ $name -> id }}</td>
+                                <td>{{ $name -> name }}</td>
                             </tr>
                         @endforeach
                 </tbody>

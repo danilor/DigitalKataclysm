@@ -15,7 +15,7 @@
                                 <li class=""><a href="/"><span class="fa fa-home"></span>{{ "Home" }}</a></li>
                                 <li class=""><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="fa fa-list"></span> {{ "Examples" }}</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="/yvideo/wvO3zJaNBjs"><span class="fa fa-youtube-play"></span> {{ "Youtube Video" }}</a></li>
+                                        <li><a href="/yvideo/r0ccFg1S7OA"><span class="fa fa-youtube-play"></span> {{ "Youtube Video" }}</a></li>
                                         <li><a href="/database_example"><span class="fa fa-database"></span> {{ "DB" }}</a></li>
 
                                     </ul>

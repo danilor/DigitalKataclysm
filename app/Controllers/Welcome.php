@@ -44,8 +44,8 @@ class Welcome extends Controller
     public function showDatabase() : \Kataclysm\Responses\ResponseView
     {
         $data = [];
-        $offices = \DB::con()->table("office")->get();
-        $data[ "offices" ] = $offices;
+        $name = \DB::con()->table("test")->get();
+        $data[ "names" ] = $name;
         return $this->view( "start.database" , $data );
     }
 }
