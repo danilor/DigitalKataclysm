@@ -102,6 +102,39 @@ and be sure to credit me if you are using any of it, including independent class
 
 Copyright 2017 | San José, Costa Rica
 
+## Instalation
+
+DigitalKataclysm installation is similar to every other composer project. First find a place where your code 
+will be stored, and using any code terminal (command line or linux terminal)
+
+    $ git clone https://github.com/danilor/DigitalKataclysm.git
+    
+Or if you are using GITHUB by SSH
+
+    $ git clone git@github.com:danilor/DigitalKataclysm.git
+    
+After that, you will have to run the composer install function that will 
+download and register all required libraries and modules for Digital Kataclysm.  
+
+    $ composer install
+    
+Later, open the app.ini file (if you don't have one, clone the app.ini_example file) 
+and change its information with the one of your machine.
+
+    [DEVELOPMENT ENVIORONMENT]
+    ENV=development
+    KEY=64STR98WOFM7492N3F5VM7324FGHOQ21
+
+    [DATABASE INFORMATION]
+    DB_HOST=
+    DB_NAME=
+    DB_USER=
+    DB_PASS=
+    DB_PORT=
+
+Doing this, you should be able to open your browser and navigate to the main page and start using
+the Framework. You can check the example pages for more information.
+
 ## Working status
 
 - [x] Composer set up
