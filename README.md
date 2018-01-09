@@ -134,7 +134,7 @@ Copyright 2017 | San José, Costa Rica
     - [X] View JSON type
     - [X] View XML type
     - [X] Redirect Response type
-
+- [ ] Crypt Class
 
 ## Contributors
 
